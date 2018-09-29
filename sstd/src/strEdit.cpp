@@ -31,7 +31,7 @@ bool sstd::writeAll_bin(const std::string& writePath, std::vector<uint8>& rhs){ 
 std::string sstd::readAll(const char* pReadFile){
 	sstd::file fp; if(!fp.fopen(pReadFile, "rb")){ sstd::pdbg("ERROR: fopen was failed.\n"); return std::string(); }
 	size_t size = fp.fsize(); // ファイルサイズを取得
-	std::string str(size+1, 0);	//0で初期化	//終端コード分を余分に確保
+	std::string str(size, 0); // 0で初期化
 	if(fp.fread((uchar*)&str[0], sizeof(char), size)!=size){ sstd::pdbg("ERROR: fread was failed.\n"); return std::string(); }
 	return str;
 }

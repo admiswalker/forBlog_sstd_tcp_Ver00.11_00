@@ -1,0 +1,4 @@
+﻿This is a sample of plain text file.
+As you know, line feed code is not work.
+This means that plain text file needs to treat as a raw file.
+(Right clike and trying to save this page will telling the expansion of this page is ".html".)
